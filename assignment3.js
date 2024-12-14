@@ -35,3 +35,5 @@ function displayData(results){
         tableBody.appendChild(tablerow);
             });
     }
+// Add an event listener to call fetchData when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded' , fetchData);
