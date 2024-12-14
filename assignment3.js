@@ -19,5 +19,19 @@ catch(error){
 
 //Display results in the table
 function displayData(results){ 
-     
-}
+    const tableBody = document.getElementById("tablebody");
+    // use for each to Add results  into tablerow
+    results.forEach(results => {
+        const tablerow = document.createElement("tr");
+        
+        tablerow.innerHTML= `
+        <td>${results.year}</td>
+        <td>${results.semester}</td>
+        <td>${results.the_programs}</td>
+        <td>${results.nationality}</td>
+        <td>${results.colleges}</td>
+        <td>${results.number_of_students}</td>
+        `
+        tableBody.appendChild(tablerow);
+            });
+    }
